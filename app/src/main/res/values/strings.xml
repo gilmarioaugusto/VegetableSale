@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">iFruit</string>
+    <string name="Email">E-mail</string>
+    <string name="Senha">Senha</string>
+    <string name="Entrar">Login</string>
+    <string name="Nome">Nome</string>
+    <string name="cpf">CPF</string>
+</resources>
