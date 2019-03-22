@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Mar 11 20:06:38 BRT 2019
+#Fri Mar 22 15:06:09 BRT 2019
 0.baseType=DIRECTORY
 0.base=/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/dex/debug/mergeDexDebug/out
 0.path=classes.dex
