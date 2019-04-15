@@ -7,7 +7,6 @@
     <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="28" />
-
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -34,16 +33,16 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="e.tux.ifruit.ListarProdutos"
+            android:label="Lista de Produtos"
+            android:parentActivityName="e.tux.ifruit.MainActivity" />
+        <activity
+            android:name="e.tux.ifruit.CadastrarProduto"
+            android:label="Cadastro de Produtos"
+            android:parentActivityName="e.tux.ifruit.MainActivity" />
+        <activity
             android:name="e.tux.ifruit.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name="e.tux.ifruit.TelaInicial" />
-        <activity android:name="e.tux.ifruit.TelaCadastroAdmin" />
-        <activity android:name="e.tux.ifruit.TelaAdmin" />
-        <activity android:name="e.tux.ifruit.TelaConsulta" />
-        <activity
-            android:name="e.tux.ifruit.TelaCadastro"
-            android:parentActivityName="e.tux.ifruit.MainActivity"
-            android:screenOrientation="portrait" />
         <activity
             android:name="e.tux.ifruit.MainActivity"
             android:screenOrientation="portrait" >
@@ -137,6 +136,11 @@
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.1.0" />
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="e.tux.ifruit.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

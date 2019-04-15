@@ -1,14 +1,15 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-39:12
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:1-38:12
 MERGED from [com.android.support:design:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/2b2bc881aa2baabb55ea9a2ea2becb4f/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e739e1646f4093e5dfacef65afe58a2a/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/tux/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/7a8b1499adcaa7917da7b1aac9589ae3/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-core:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/a950b4ed384c74070309a1ca1ca3d9a8/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:16.0.3] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.3.aar/6277bcc747a038f05c2abee7c22569b4/AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.firebase:firebase-database:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.1.aar/b6706d6e92afc856174023683f6f38ce/AndroidManifest.xml:2:1-8:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/4d4997f3ad60d1b27367d8ffdeee58a8/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/4048e77cc5f15af2560038db879c9a04/AndroidManifest.xml:17:1-34:12
 MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/10a3b6636e25e838412ec954fa1702a2/AndroidManifest.xml:17:1-55:12
@@ -18,8 +19,10 @@ MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/tux/.grad
 MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/25a7e6ae034ac98b0a8f175c5c85c9a4/AndroidManifest.xml:17:1-65:12
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/f8c08211d61fb95d4a773650f90d1a9f/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5c241988d87fb655646ee0d8107228e1/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/c9241206b77bbcd7e0fd1864733bc8a6/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/74be0e68ab63adcf20d49f8f231e4a56/AndroidManifest.xml:2:1-16:12
 MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/6e14f2042d23bbec770d9dd42cba2281/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-database-collection:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-15.0.1.aar/2704dd089a66bed26a63cf6b980876d7/AndroidManifest.xml:2:1-8:12
 MERGED from [com.google.android.gms:play-services-stats:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/3b263d25e5b51999d3976ce2d4812116/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/4de89c2e2860edc82670a85e54a9b41c/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/7081abd0e068044d670b0f371205623e/AndroidManifest.xml:17:1-24:12
@@ -54,37 +57,37 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/tux/.gradle/caches/tra
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/tux/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/825c8825611d6441fd8fcd0a763b612d/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /home/tux/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/7dac92b10a13b8feeb3afd818bb51f72/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/ee1c4934f5e3c73a6220e841ca14ba3d/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:1-38:12
 	package
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:3:5-27
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:3:5-27
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-39:12
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:1-38:12
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-39:12
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:1-38:12
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:6:5-71
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:5:5-71
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:6:22-68
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:5:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:7:5-71
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:6:5-71
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:7:22-68
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:6:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:8:5-72
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:7:5-72
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:8:22-69
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:7:22-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:9:5-67
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:8:5-67
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/4048e77cc5f15af2560038db879c9a04/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/4048e77cc5f15af2560038db879c9a04/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/10a3b6636e25e838412ec954fa1702a2/AndroidManifest.xml:23:5-67
@@ -93,10 +96,12 @@ MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/tux/.grad
 MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/8a4cd493904bf019d195ed0a27ec7dff/AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/25a7e6ae034ac98b0a8f175c5c85c9a4/AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-iid:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/25a7e6ae034ac98b0a8f175c5c85c9a4/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/c9241206b77bbcd7e0fd1864733bc8a6/AndroidManifest.xml:8:5-67
+MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/c9241206b77bbcd7e0fd1864733bc8a6/AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:9:22-64
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:8:22-64
 application
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:11:5-37:19
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:10:5-36:19
 MERGED from [com.android.support:design:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/2b2bc881aa2baabb55ea9a2ea2becb4f/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/2b2bc881aa2baabb55ea9a2ea2becb4f/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/tux/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/7a8b1499adcaa7917da7b1aac9589ae3/AndroidManifest.xml:9:5-20
@@ -144,65 +149,57 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/1439683c1a7c0d7dd4daf5fb80481160/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:14:9-41
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:13:9-41
 	android:icon
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:13:9-43
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:16:9-40
-activity#e.tux.ifruit.LoginActivity
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:17:9-19:69
-	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:19:13-57
-	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:18:13-42
-activity#e.tux.ifruit.TelaInicial
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:20:9-49
-	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:20:19-46
-activity#e.tux.ifruit.TelaCadastroAdmin
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:21:9-55
-	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:21:19-52
-activity#e.tux.ifruit.TelaAdmin
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:22:9-47
-	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:22:19-44
-activity#e.tux.ifruit.TelaConsulta
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:23:9-50
-	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:23:19-47
-activity#e.tux.ifruit.TelaCadastro
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:24:9-27:52
-	android:screenOrientation
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:27:13-49
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:15:9-40
+activity#e.tux.ifruit.ListarProdutos
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:16:9-19:58
 	android:parentActivityName
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:26:13-55
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:18:13-55
+	android:label
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:19:13-46
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:25:13-41
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:17:13-43
+activity#e.tux.ifruit.CadastrarProduto
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:20:9-23:58
+	android:parentActivityName
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:23:13-55
+	android:label
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:22:13-49
+	android:name
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:21:13-45
+activity#e.tux.ifruit.LoginActivity
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:24:9-26:60
+	android:label
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:26:13-57
+	android:name
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:25:13-42
 activity#e.tux.ifruit.MainActivity
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:28:9-36:20
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:27:9-35:20
 	android:screenOrientation
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:30:13-49
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:29:13-49
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:29:13-41
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:28:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:31:13-35:29
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:32:17-69
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:32:25-66
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:34:17-77
+ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:34:27-74
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml:33:27-74
 uses-sdk
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
 MERGED from [com.android.support:design:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/2b2bc881aa2baabb55ea9a2ea2becb4f/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/2b2bc881aa2baabb55ea9a2ea2becb4f/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e739e1646f4093e5dfacef65afe58a2a/AndroidManifest.xml:20:5-44
@@ -213,6 +210,8 @@ MERGED from [com.google.firebase:firebase-core:16.0.1] /home/tux/.gradle/caches/
 MERGED from [com.google.firebase:firebase-core:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.1.aar/a950b4ed384c74070309a1ca1ca3d9a8/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth:16.0.3] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.3.aar/6277bcc747a038f05c2abee7c22569b4/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth:16.0.3] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.3.aar/6277bcc747a038f05c2abee7c22569b4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.1.aar/b6706d6e92afc856174023683f6f38ce/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.1.aar/b6706d6e92afc856174023683f6f38ce/AndroidManifest.xml:6:5-44
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/4d4997f3ad60d1b27367d8ffdeee58a8/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/4d4997f3ad60d1b27367d8ffdeee58a8/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/4048e77cc5f15af2560038db879c9a04/AndroidManifest.xml:20:5-44
@@ -231,10 +230,14 @@ MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /home/tux/.gradle/
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/f8c08211d61fb95d4a773650f90d1a9f/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5c241988d87fb655646ee0d8107228e1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5c241988d87fb655646ee0d8107228e1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/c9241206b77bbcd7e0fd1864733bc8a6/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/c9241206b77bbcd7e0fd1864733bc8a6/AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-common:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/74be0e68ab63adcf20d49f8f231e4a56/AndroidManifest.xml:5:5-6:37
 MERGED from [com.google.firebase:firebase-common:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/74be0e68ab63adcf20d49f8f231e4a56/AndroidManifest.xml:5:5-6:37
 MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/6e14f2042d23bbec770d9dd42cba2281/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/6e14f2042d23bbec770d9dd42cba2281/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-15.0.1.aar/2704dd089a66bed26a63cf6b980876d7/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-collection:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-15.0.1.aar/2704dd089a66bed26a63cf6b980876d7/AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-stats:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/3b263d25e5b51999d3976ce2d4812116/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-stats:15.0.1] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/3b263d25e5b51999d3976ce2d4812116/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/4de89c2e2860edc82670a85e54a9b41c/AndroidManifest.xml:20:5-44
@@ -303,18 +306,18 @@ MERGED from [android.arch.core:runtime:1.1.1] /home/tux/.gradle/caches/transform
 MERGED from [android.arch.core:runtime:1.1.1] /home/tux/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/7dac92b10a13b8feeb3afd818bb51f72/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/ee1c4934f5e3c73a6220e841ca14ba3d/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/tux/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/ee1c4934f5e3c73a6220e841ca14ba3d/AndroidManifest.xml:20:5-44
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
+INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-v4:26.1.0] /home/tux/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/2d712a0949b39497255cdaa98c059138/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
+		ADDED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tux/Android Studio Projects/iFruit/app/src/main/AndroidManifest.xml
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:16.0.3] /home/tux/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.3.aar/6277bcc747a038f05c2abee7c22569b4/AndroidManifest.xml:23:9-29:75
 	android:excludeFromRecents

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/home/tux/Android Studio Projects/iFruit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
                     "source": "/home/tux/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/2b2bc881aa2baabb55ea9a2ea2becb4f/res/values-land/values-land.xml",

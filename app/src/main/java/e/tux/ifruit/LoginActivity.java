@@ -33,8 +33,10 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -99,13 +101,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mSignUpButton = (Button) findViewById(R.id.email_sign_up_button);
+        /*Button mSignUpButton = (Button) findViewById(R.id.email_sign_up_button);
         mSignUpButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 attemptLogin(true);
             }
-        });
+        });*/
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
@@ -208,7 +210,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         showProgress(false);
                         Toast.makeText(getApplicationContext(), "Usuário cadastrado com Sucesso!!",1).show();
-
                     }
                 });
             } else {
@@ -216,27 +217,25 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         showProgress(false);
-                        if (task.getResult().getUser() != null){
-                            startActivity(new Intent(LoginActivity.this, TelaInicial.class));
+                        if (task.isSuccessful()){
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             finish();
-                        } else{
-                            Toast.makeText(getApplicationContext(),"E-mail ou senha inválidos", 1).show();
+                        } else if (task.getException() instanceof FirebaseNetworkException) {
+                            Toast.makeText(getApplicationContext(),"Sem conexão",1).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(),"Usuário ou senha incorretos",1).show();
                         }
                     }
                 });
-              //  mAuthTask = new UserLoginTask(email, password);
-              //  mAuthTask.execute((Void) null);
             }
         }
     }
 
     private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
         return email.contains("@");
     }
 
     private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
         return password.length() > 4;
     }
 

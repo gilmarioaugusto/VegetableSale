@@ -1,122 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="28"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="25"
     build-mode="COLD"
-    density="420dpi"
+    density="xxhdpi"
     format="10"
+    ir-eligibility="IMPLEMENTED_INTERFACES_CHANGE"
     plugin-version="3.3.2"
-    timestamp="1552266866183"
-    token="5792399794270483662"
+    timestamp="1555287020630"
+    token="-193759162220199103"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="926" />
+        duration="122" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="23" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1" />
+
+    <artifact
+        location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1552182552365"
+        timestamp="1555276612929"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1552182628611"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1555285764019"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1552266604472"
+        ir-eligibility="IMPLEMENTED_INTERFACES_CHANGE"
+        timestamp="1555287020630"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/tux/Android Studio Projects/iFruit/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1552266866183"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

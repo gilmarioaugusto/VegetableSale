@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
+            "outputFile": "/home/tux/Android Studio Projects/iFruit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
             "map": [
                 {
                     "source": "/home/tux/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/c877e7093e46c546bdf4287a1d31537c/res/values-fr/values.xml",

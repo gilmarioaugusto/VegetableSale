@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="e.tux.ifruit">
-
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -15,16 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"></activity>
-        <activity android:name=".TelaInicial" />
-        <activity android:name=".TelaCadastroAdmin" />
-        <activity android:name=".TelaAdmin" />
-        <activity android:name=".TelaConsulta" />
-        <activity
-            android:name=".TelaCadastro"
+            android:name=".ListarProdutos"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait" />
+            android:label="Lista de Produtos"></activity>
+        <activity
+            android:name=".CadastrarProduto"
+            android:label="Cadastro de Produtos"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
