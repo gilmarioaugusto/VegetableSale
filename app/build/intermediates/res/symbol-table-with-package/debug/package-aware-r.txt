@@ -1200,6 +1200,7 @@ id notification_main_column
 id notification_main_column_container
 id outline
 id packed
+id pagar
 id parallax
 id parent
 id parentPanel
@@ -1207,6 +1208,7 @@ id parent_matrix
 id password
 id percent
 id pin
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -1298,6 +1300,7 @@ id up
 id useLogo
 id view_offset_helper
 id visible
+id webView
 id wide
 id withText
 id wrap
@@ -1354,6 +1357,7 @@ layout activity_cadastrar_produto
 layout activity_listar_produtos
 layout activity_login
 layout activity_main
+layout activity_pagamento_pay_pal
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

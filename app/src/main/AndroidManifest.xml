@@ -14,9 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".pagamento.PagamentoPayPal"
+            android:label="Pagar Compras"
+            android:parentActivityName=".ListarProdutos">
+        </activity>
+        <activity
             android:name=".ListarProdutos"
-            android:parentActivityName=".MainActivity"
-            android:label="Lista de Produtos"></activity>
+            android:label="Lista de Produtos"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".CadastrarProduto"
             android:label="Cadastro de Produtos"

@@ -11,7 +11,8 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
+import e.tux.ifruit.pagamento.PagamentoPayPal;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btSair;
     private Button btExibirProduto;
     private Button btChamarCadastroProduto;
+    private Button btPagar;
     private DatabaseReference mBanco;
 
 
@@ -65,6 +67,14 @@ public class MainActivity extends AppCompatActivity {
                 mAuth.signOut();
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 finish();
+            }
+        });
+
+        btPagar = (Button) findViewById(R.id.pagar);
+        btPagar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PagamentoPayPal.class));
             }
         });
     }
