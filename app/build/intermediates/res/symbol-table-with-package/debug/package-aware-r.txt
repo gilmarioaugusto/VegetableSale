@@ -790,6 +790,7 @@ dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen altura_botoes_menu
 dimen altura_padrao
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -861,6 +862,7 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen largura_botoes_menu
 dimen largura_padrao
 dimen mtrl_bottomappbar_fabOffsetEndMode
 dimen mtrl_bottomappbar_fab_cradle_margin
@@ -1018,8 +1020,13 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable add_user
+drawable alface_icon
 drawable avd_hide_password
 drawable avd_show_password
+drawable bt_add_background
+drawable bt_carrinho
+drawable bt_exit_background
+drawable bt_search_background
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1047,6 +1054,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable horta_background
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
@@ -1109,9 +1117,10 @@ id beginning
 id blocking
 id bottom
 id btCadastrarProduto
-id btChamarCadastroProduto
-id btExibirProdutos
-id btSair
+id bt_cadastrar_produto
+id bt_carrinho
+id bt_listar_produto
+id bt_logoff
 id buttonPanel
 id cancel_action
 id center
@@ -1200,7 +1209,6 @@ id notification_main_column
 id notification_main_column_container
 id outline
 id packed
-id pagar
 id parallax
 id parent
 id parentPanel

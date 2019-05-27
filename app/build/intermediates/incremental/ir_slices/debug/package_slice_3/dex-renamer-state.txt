@@ -1,4 +1,4 @@
-#Sun Apr 14 20:49:38 BRT 2019
-base.0=/home/tux/Android Studio Projects/iFruit/app/build/intermediates/transforms/dexMerger/debug/3
+#Fri May 24 20:31:54 BRT 2019
+base.0=/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/transforms/dexMerger/debug/3
 path.0=classes.dex
 renamed.0=classes.dex

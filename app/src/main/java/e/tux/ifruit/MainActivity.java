@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
     private Intent it;
     private TextView msg;
     private FirebaseAuth mAuth;
-    private Button btSair;
-    private Button btExibirProduto;
-    private Button btChamarCadastroProduto;
-    private Button btPagar;
+    private ImageButton btSair;
+    private ImageButton btExibirProduto;
+    private ImageButton btChamarCadastroProduto;
+    private ImageButton btPagar;
     private DatabaseReference mBanco;
 
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        btChamarCadastroProduto = findViewById(R.id.btChamarCadastroProduto);
+        btChamarCadastroProduto = findViewById(R.id.bt_cadastrar_produto);
         btChamarCadastroProduto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btExibirProduto = findViewById(R.id.btExibirProdutos);
+        btExibirProduto = findViewById(R.id.bt_listar_produto);
         btExibirProduto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btSair = findViewById(R.id.btSair);
+        btSair = findViewById(R.id.bt_logoff);
         btSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btPagar = (Button) findViewById(R.id.pagar);
+        btPagar = findViewById(R.id.bt_carrinho);
         btPagar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

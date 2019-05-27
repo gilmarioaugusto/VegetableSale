@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\YNARA\\AndroidStudioProjects\\iFruit\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\YNARA\\.gradle\\caches\\transforms-2\\files-2.1\\c545d580bd55fa44bd382eed07954163\\res\\values-land\\values-land.xml",
+                    "source": "/home/tux/.gradle/caches/transforms-2/files-2.1/3c347a7ad4a2040d6bd63b2b4c41f83d/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\YNARA\\.gradle\\caches\\transforms-2\\files-2.1\\49e5af57369cbbb9743875872ab92ff9\\res\\values-land\\values-land.xml",
+                    "source": "/home/tux/.gradle/caches/transforms-2/files-2.1/f80e91a5ca7186187509b226de787c64/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
