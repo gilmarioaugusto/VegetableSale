@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = mAuth.getCurrentUser();
 
         if (user != null) {
-            Toast.makeText(getApplicationContext(), "Bem-vindo de volta "+user.getEmail(), 1).show();
+            //Toast.makeText(getApplicationContext(), "Bem-vindo de volta "+user.getEmail(), 1).show();
             msg =  findViewById(R.id.txtBemVindo);
-            msg.setText("Bem-Vindo "+user.getEmail());
+            msg.setText(user.getEmail());
         } else {
             it = new Intent(this, LoginActivity.class);
             startActivity(it);

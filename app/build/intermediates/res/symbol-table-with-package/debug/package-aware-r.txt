@@ -1023,6 +1023,7 @@ drawable add_user
 drawable alface_icon
 drawable avd_hide_password
 drawable avd_show_password
+drawable bemvindo_banner
 drawable bt_add_background
 drawable bt_carrinho
 drawable bt_exit_background
@@ -1177,6 +1178,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
