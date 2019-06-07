@@ -5,14 +5,16 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.CompoundButton;
+import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class CadastrarProduto extends AppCompatActivity {
 
@@ -20,20 +22,23 @@ public class CadastrarProduto extends AppCompatActivity {
     private AutoCompleteTextView tfPreco;
     private AutoCompleteTextView tfQuantidade;
     private Produto produtoUp;
-    private Button btCadastrar;
-    private DatabaseReference mDatabase;
+    private ImageButton btCadastrar;
+    private FirebaseFirestore mDatabase;
     private FirebaseAuth mAuth;
     private FirebaseUser user;
+    private RadioButton porUnidade;
+    private RadioButton porQuilo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        mAuth = FirebaseAuth.getInstance();
-        user = mAuth.getCurrentUser();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_produto);
+
+        mDatabase = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+        porUnidade = findViewById(R.id.rbPorUn);
+        porQuilo = findViewById(R.id.rbPorQuilo);
 
         btCadastrar = findViewById(R.id.btCadastrarProduto);
         btCadastrar.setOnClickListener(new View.OnClickListener() {
@@ -42,9 +47,10 @@ public class CadastrarProduto extends AppCompatActivity {
                 executarCadastro();
             }
         });
+
     }
 
-    public void executarCadastro(){
+    public void executarCadastro() {
         boolean cancel = false;
         View erro = null;
         tfNome = findViewById(R.id.tfNome);
@@ -53,37 +59,42 @@ public class CadastrarProduto extends AppCompatActivity {
         String strNome = tfNome.getText().toString();
         String strPreco = tfPreco.getText().toString();
         String strQuantidade = tfQuantidade.getText().toString();
-        if (TextUtils.isEmpty(strNome)){
+        if (TextUtils.isEmpty(strNome)) {
             tfNome.setError("Campo obrigatório");
             erro = tfNome;
             cancel = true;
-        } else if(TextUtils.isEmpty(strPreco)){
+        } else if (TextUtils.isEmpty(strPreco)) {
             tfPreco.setError("Campo obrigatório");
             erro = tfPreco;
             cancel = true;
-        } else if(TextUtils.isEmpty(strQuantidade)){
+        } else if (TextUtils.isEmpty(strQuantidade)) {
             tfQuantidade.setError("Campo obrigatório");
             erro = tfQuantidade;
             cancel = true;
         }
-        if (cancel){
+        if (cancel) {
             erro.requestFocus();
         } else {
             double doublePreco = Double.parseDouble(strPreco);
-            int intQuantidade = Integer.parseInt(strQuantidade);
+            double doubleQuantidade = Integer.parseInt(strQuantidade);
             String proprietario = user.getEmail().substring(0, user.getEmail().indexOf("@"));
             produtoUp = new Produto();
-            produtoUp.nome = strNome;
-            produtoUp.preco = doublePreco;
-            produtoUp.quantidade = intQuantidade;
-            produtoUp.proprietario = user.getEmail();
-            mDatabase.child("Produto").child(proprietario).child(strNome).setValue(produtoUp);
-            Toast.makeText(getApplicationContext(),"Produto Cadastrado",1).show();
+            if (porQuilo.isChecked()){
+                produtoUp.setPorUnidade(false);
+            } else if(porUnidade.isChecked()) {
+                produtoUp.setPorUnidade(true);
+            }
+            produtoUp.setNome(strNome);
+            produtoUp.setPrecoIndividual(doublePreco);
+            produtoUp.setQuantidadeDisponivel(doubleQuantidade);
+            produtoUp.setProprietario(user.getEmail());
+            mDatabase.collection("produtos").document(strNome).set(produtoUp);
+            Toast.makeText(getApplicationContext(), "Produto Cadastrado", 1).show();
             limparCampos();
         }
     }
 
-    public void limparCampos(){
+    public void limparCampos() {
         tfNome.setText("");
         tfPreco.setText("");
         tfQuantidade.setText("");

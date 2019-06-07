@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_principal"
     tools:context=".CadastrarProduto">
 
     <android.support.design.widget.TextInputLayout
@@ -84,16 +85,41 @@
             tools:layout_editor_absoluteY="285dp" />
     </android.support.design.widget.TextInputLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/btCadastrarProduto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="@dimen/tamanho_botao_add"
+        android:layout_height="@dimen/tamanho_botao_add"
         android:layout_marginBottom="32dp"
-        android:text="Cadastrar"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/add_button" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+        <RadioButton
+            android:id="@+id/rbPorQuilo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Preço por Quilo" />
+
+        <RadioButton
+            android:id="@+id/rbPorUn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preço por Unidade" />
+
+    </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>

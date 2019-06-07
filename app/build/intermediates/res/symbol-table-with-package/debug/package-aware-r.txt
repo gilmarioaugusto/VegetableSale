@@ -927,6 +927,9 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen tamanho_botao_add
+dimen tamanho_botao_carrinho
+dimen tamanho_floating_button_carrinho
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -1019,6 +1022,9 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable add_button
+drawable add_remove_button_add
+drawable add_remove_button_remove
 drawable add_user
 drawable alface_icon
 drawable avd_hide_password
@@ -1026,6 +1032,8 @@ drawable avd_show_password
 drawable bemvindo_banner
 drawable bt_add_background
 drawable bt_carrinho
+drawable bt_carrinho_circular
+drawable bt_check
 drawable bt_exit_background
 drawable bt_search_background
 drawable common_full_open_on_phone
@@ -1118,10 +1126,15 @@ id beginning
 id blocking
 id bottom
 id btCadastrarProduto
+id bt_adicionar
+id bt_adicionar_ao_carrinho
 id bt_cadastrar_produto
 id bt_carrinho
+id bt_finalizar_compra
+id bt_floating_carrinho
 id bt_listar_produto
 id bt_logoff
+id bt_remover
 id buttonPanel
 id cancel_action
 id center
@@ -1183,6 +1196,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id label_Quantidade
 id labeled
 id largeLabel
 id left
@@ -1191,6 +1205,7 @@ id line1
 id line3
 id listMode
 id list_item
+id list_view_carrinho
 id listaItens
 id login_form
 id login_progress
@@ -1222,6 +1237,9 @@ id progressBar
 id progress_circular
 id progress_horizontal
 id radio
+id radioGroup
+id rbPorQuilo
+id rbPorUn
 id right
 id right_icon
 id right_side
@@ -1281,6 +1299,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView3
+id textView4
 id textView6
 id text_input_password_toggle
 id textinput_counter
@@ -1301,9 +1320,13 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id txTeste
-id txTeste2
 id txtBemVindo
+id txt_Kg_ou_Un
+id txt_Quantidade
+id txt_Total
+id txt_nome_produto
+id txt_valor_produto
+id txt_vazio
 id uniform
 id unlabeled
 id up
@@ -1363,7 +1386,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_adicionar_carrinho
 layout activity_cadastrar_produto
+layout activity_carrinho
 layout activity_listar_produtos
 layout activity_login
 layout activity_main

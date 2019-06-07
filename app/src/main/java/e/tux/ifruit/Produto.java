@@ -1,39 +1,31 @@
 package e.tux.ifruit;
 
-import com.google.firebase.database.Exclude;
-import com.google.firebase.database.IgnoreExtraProperties;
+import java.io.Serializable;
 
-import java.util.HashMap;
-import java.util.Map;
+public class Produto implements Serializable {
 
-@IgnoreExtraProperties
-public class Produto {
-
-    public String nome;
-    public double preco;
-    public int quantidade;
-    public String proprietario;
+    private String nome;
+    private double precoIndividual;
+    private double quantidadeDisponivel;
+    private String proprietario;
+    private Boolean porUnidade;
 
     public Produto() {
 
     }
 
-    public Produto(String nome, double preco, String proprietario, int quantidade) {
+    public Produto(String nome, double precoIndividual, String proprietario, double quantidadeDisponivel, boolean porUnidade) {
         this.nome = nome;
-        this.preco = preco;
-        this.quantidade = quantidade;
+        this.precoIndividual = precoIndividual;
+        this.quantidadeDisponivel = quantidadeDisponivel;
         this.proprietario = proprietario;
+        this.porUnidade = porUnidade;
     }
 
-    @Exclude
-    public Map<String, Object> toMap() {
-        HashMap<String, Object> result = new HashMap<>();
-        result.put("nome", nome);
-        result.put("preco", preco);
-        result.put("quantidade", quantidade);
-        result.put("proprietario", proprietario);
-
-        return result;
+    @Override
+    public String toString() {
+        String msg = this.nome+" x "+this.quantidadeDisponivel;
+        return msg;
     }
 
     public String getNome() {
@@ -44,20 +36,20 @@ public class Produto {
         this.nome = nome;
     }
 
-    public double getPreco() {
-        return preco;
+    public double getPrecoIndividual() {
+        return precoIndividual;
     }
 
-    public void setPreco(double preco) {
-        this.preco = preco;
+    public void setPrecoIndividual(double precoIndividual) {
+        this.precoIndividual = precoIndividual;
     }
 
-    public int getQuantidade() {
-        return quantidade;
+    public double getQuantidadeDisponivel() {
+        return quantidadeDisponivel;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public void setQuantidadeDisponivel(double quantidadeDisponivel) {
+        this.quantidadeDisponivel = quantidadeDisponivel;
     }
 
     public String getProprietario() {
@@ -68,4 +60,12 @@ public class Produto {
         this.proprietario = proprietario;
     }
 
+    public Boolean getPorUnidade() {
+        return porUnidade;
+    }
+
+    public void setPorUnidade(Boolean porUnidade) {
+        this.porUnidade = porUnidade;
+    }
 }
+

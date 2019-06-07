@@ -8,4 +8,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="dimensaoPadraoCadastroProduto">270dp</dimen>
+    <dimen name="tamanho_botao_carrinho">30dp</dimen>
+    <dimen name="tamanho_botao_add">80dp</dimen>
+    <dimen name="tamanho_floating_button_carrinho">60dp</dimen>
 </resources>

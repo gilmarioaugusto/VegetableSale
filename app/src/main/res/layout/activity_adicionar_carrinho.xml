@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_principal"
+    tools:context=".AdicionarCarrinho">
+
+    <TextView
+        android:id="@+id/txt_nome_produto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Nome do Produto"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/txt_Kg_ou_Un"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Preço p/ Kg ou Un."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nome_produto" />
+
+    <TextView
+        android:id="@+id/txt_valor_produto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Valor do Produto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Kg_ou_Un" />
+
+    <TextView
+        android:id="@+id/label_Quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Quantidade:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_valor_produto" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Adicionar ao carrrinho"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bt_adicionar"
+        android:layout_width="@dimen/tamanho_botao_carrinho"
+        android:layout_height="@dimen/tamanho_botao_carrinho"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_remover"
+        app:layout_constraintTop_toBottomOf="@+id/label_Quantidade"
+        app:srcCompat="@drawable/add_remove_button_add" />
+
+    <ImageButton
+        android:id="@+id/bt_remover"
+        android:layout_width="@dimen/tamanho_botao_carrinho"
+        android:layout_height="@dimen/tamanho_botao_carrinho"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/bt_adicionar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_Quantidade"
+        app:srcCompat="@drawable/add_remove_button_remove" />
+
+    <TextView
+        android:id="@+id/txt_Quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_adicionar"
+        app:layout_constraintStart_toEndOf="@+id/bt_remover"
+        app:layout_constraintTop_toBottomOf="@+id/label_Quantidade" />
+
+    <ImageButton
+        android:id="@+id/bt_adicionar_ao_carrinho"
+        android:layout_width="@dimen/tamanho_botao_add"
+        android:layout_height="@dimen/tamanho_botao_add"
+        android:layout_marginBottom="32dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/add_button" />
+
+    <TextView
+        android:id="@+id/txt_Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Quantidade" />
+
+</android.support.constraint.ConstraintLayout>

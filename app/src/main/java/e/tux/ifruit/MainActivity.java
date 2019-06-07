@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btSair;
     private ImageButton btExibirProduto;
     private ImageButton btChamarCadastroProduto;
-    private ImageButton btPagar;
+    private ImageButton btChamarCarrinho;
     private DatabaseReference mBanco;
 
 
@@ -71,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btPagar = findViewById(R.id.bt_carrinho);
-        btPagar.setOnClickListener(new View.OnClickListener() {
+        btChamarCarrinho = findViewById(R.id.bt_carrinho);
+        btChamarCarrinho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), PagamentoPayPal.class));
+                startActivity(new Intent(getApplicationContext(), Carrinho.class));
             }
         });
     }

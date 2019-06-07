@@ -14,10 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".AdicionarCarrinho"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".Carrinho"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".pagamento.PagamentoPayPal"
             android:label="Pagar Compras"
-            android:parentActivityName=".ListarProdutos">
-        </activity>
+            android:parentActivityName=".ListarProdutos" />
         <activity
             android:name=".ListarProdutos"
             android:label="Lista de Produtos"
