@@ -2,8 +2,8 @@
 <resources>
     <dimen name="altura_padrao">42dp</dimen>
     <dimen name="largura_padrao">300dp</dimen>
-    <dimen name="largura_botoes_menu">130dp</dimen>
-    <dimen name="altura_botoes_menu">130dp</dimen>
+    <dimen name="largura_botoes_menu">100dp</dimen>
+    <dimen name="altura_botoes_menu">100dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -11,4 +11,6 @@
     <dimen name="tamanho_botao_carrinho">30dp</dimen>
     <dimen name="tamanho_botao_add">80dp</dimen>
     <dimen name="tamanho_floating_button_carrinho">60dp</dimen>
+    <dimen name="tamanho_texto_detalhes_transacao">25sp</dimen>
+    <dimen name="tamanho_guias_detalhe_transacao">18sp</dimen>
 </resources>

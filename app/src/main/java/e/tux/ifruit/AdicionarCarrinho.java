@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.DecimalFormat;
@@ -31,6 +32,7 @@ public class AdicionarCarrinho extends AppCompatActivity {
     private ReservaProduto reservaProduto;
     private double totalProduto;
     private FirebaseFirestore mDatabase;
+    private FirebaseAuth mAuth;
     private Produto produtoCarregado;
 
     @Override
@@ -48,6 +50,7 @@ public class AdicionarCarrinho extends AppCompatActivity {
         addCarrinho = findViewById(R.id.bt_adicionar_ao_carrinho);
         decimalFormat = new DecimalFormat("0.00");
         mDatabase = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         produtoCarregado = new Produto();
 
@@ -110,11 +113,12 @@ public class AdicionarCarrinho extends AppCompatActivity {
         reservaProduto.setPrecoIndividual(produtoCarregado.getPrecoIndividual());
         reservaProduto.setQuantidadeDisponivel(produtoCarregado.getQuantidadeDisponivel());
         reservaProduto.setProprietario(produtoCarregado.getProprietario());
+        reservaProduto.setComprador(mAuth.getCurrentUser().getEmail());
         quantidadeComprada = Double.parseDouble(String.valueOf(txtQuantidade.getText()));
         totalProduto = produtoCarregado.getPrecoIndividual()*quantidadeComprada;
         reservaProduto.setPrecoDaCompra(totalProduto);
         reservaProduto.setQuantidadeComprada(quantidadeComprada);
-        mDatabase.collection("carrinhos").document(reservaProduto.getProprietario())
+        mDatabase.collection("carrinhos").document(reservaProduto.getComprador())
                 .collection("produtos").document(reservaProduto.getNome()).set(reservaProduto);
         Toast.makeText(getApplicationContext(), "Produto adicionado ao carrinho!", 1).show();
         Intent intent = new Intent(getApplicationContext(), ListarProdutos.class);

@@ -95,6 +95,19 @@ public class Carrinho extends AppCompatActivity {
         });
     }
 
+    private void adicionarCompra(ReservaProduto produto) {
+        ProdutoComprado produtoComprado = new ProdutoComprado();
+        produtoComprado.setComprador(user.getEmail());
+        produtoComprado.setPrecoDaCompra(produto.getPrecoDaCompra());
+        produtoComprado.setQuantidadeComprada(produto.getQuantidadeComprada());
+        produtoComprado.setNome(produto.getNome());
+        produtoComprado.setPorUnidade(produto.getPorUnidade());
+        produtoComprado.setPrecoIndividual(produto.getPrecoIndividual());
+        produtoComprado.setProprietario(produto.getProprietario());
+        db.collection("transacoes").document(produtoComprado.getComprador()).collection("compras").add(produtoComprado);
+        db.collection("transacoes").document(produtoComprado.getProprietario()).collection("vendas").add(produtoComprado);
+    }
+
     //MÉTODO RESPONSÁVEL POR VALIDAR O RETORNO DA WEBVIEW DO CARTÃO
     private boolean validarCartao() {
         return true;
@@ -106,6 +119,7 @@ public class Carrinho extends AppCompatActivity {
             double novaQuantidade = produto.getQuantidadeDisponivel() - produto.getQuantidadeComprada();
             db.collection("produtos").document(String.valueOf(produto.getNome())).update("quantidadeDisponivel", novaQuantidade);
             carrinhoRef.document(String.valueOf(produto.getNome())).delete();
+            adicionarCompra(produto);
         }
 
     }
@@ -114,6 +128,8 @@ public class Carrinho extends AppCompatActivity {
         carrinhoAdaptador = new ArrayAdapter<ReservaProduto>(this, android.R.layout.simple_expandable_list_item_2, android.R.id.text2, lista);
         listViewCarrinho.setAdapter(carrinhoAdaptador);
     }
+
+
 
 }
 

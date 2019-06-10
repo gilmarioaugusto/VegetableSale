@@ -14,11 +14,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".AdicionarCarrinho"
+            android:name=".DetalheTransacao"
+            android:label="Detalhes da Transação"
             android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".Carrinho"
+            android:name=".Vendas"
+            android:label="Vendas Realizadas"
             android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".Compras"
+            android:label="Compras Realizadas"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".AdicionarCarrinho"
+            android:label="Adicionar produto ao carrinho"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Carrinho"
+            android:label="Meu carrinho"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".pagamento.PagamentoPayPal"
             android:label="Pagar Compras"

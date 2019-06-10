@@ -31,10 +31,24 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="e.tux.ifruit.DetalheTransacao"
+            android:label="Detalhes da Transação"
+            android:parentActivityName="e.tux.ifruit.MainActivity" />
+        <activity
+            android:name="e.tux.ifruit.Vendas"
+            android:label="Vendas Realizadas"
+            android:parentActivityName="e.tux.ifruit.MainActivity" />
+        <activity
+            android:name="e.tux.ifruit.Compras"
+            android:label="Compras Realizadas"
+            android:parentActivityName="e.tux.ifruit.MainActivity" />
+        <activity
             android:name="e.tux.ifruit.AdicionarCarrinho"
+            android:label="Adicionar produto ao carrinho"
             android:parentActivityName="e.tux.ifruit.MainActivity" />
         <activity
             android:name="e.tux.ifruit.Carrinho"
+            android:label="Meu carrinho"
             android:parentActivityName="e.tux.ifruit.MainActivity" />
         <activity
             android:name="e.tux.ifruit.pagamento.PagamentoPayPal"

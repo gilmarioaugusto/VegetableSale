@@ -24,7 +24,7 @@ public class Produto implements Serializable {
 
     @Override
     public String toString() {
-        String msg = this.nome+" x "+this.quantidadeDisponivel;
+        String msg = "Nome: "+this.nome+"        Quantidade Disponível: "+this.quantidadeDisponivel;
         return msg;
     }
 

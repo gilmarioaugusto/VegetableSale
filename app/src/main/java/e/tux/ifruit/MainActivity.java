@@ -4,16 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
-
-import e.tux.ifruit.pagamento.PagamentoPayPal;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btExibirProduto;
     private ImageButton btChamarCadastroProduto;
     private ImageButton btChamarCarrinho;
+    private ImageButton btChamarCompras;
+    private ImageButton btChamarVendas;
     private DatabaseReference mBanco;
 
 
@@ -36,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = mAuth.getCurrentUser();
 
         if (user != null) {
-            //Toast.makeText(getApplicationContext(), "Bem-vindo de volta "+user.getEmail(), 1).show();
             msg =  findViewById(R.id.txtBemVindo);
             msg.setText(user.getEmail());
         } else {
@@ -76,6 +73,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Carrinho.class));
+            }
+        });
+
+        btChamarCompras = findViewById(R.id.bt_compras);
+        btChamarCompras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Compras.class));
+            }
+        });
+
+        btChamarVendas = findViewById(R.id.bt_vendas);
+        btChamarVendas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Vendas.class));
             }
         });
     }
