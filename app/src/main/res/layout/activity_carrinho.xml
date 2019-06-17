@@ -25,6 +25,7 @@
         android:layout_marginBottom="16dp"
         android:background="#00FFFFFF"
         android:scaleType="fitXY"
+        android:onClick="comprar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,4 +46,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/list_view_carrinho"
         tools:visibility="invisible" />
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="0.1dp"
+        android:layout_height="0.1dp">
+
+    </WebView>
 </android.support.constraint.ConstraintLayout>

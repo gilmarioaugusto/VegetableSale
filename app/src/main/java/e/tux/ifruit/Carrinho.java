@@ -4,9 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -22,8 +26,19 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
-public class Carrinho extends AppCompatActivity {
+import cn.carbs.android.library.MDDialog;
+import e.tux.ifruit.pagamento.CartaoDeCredito;
+import e.tux.ifruit.pagamento.ConexaoPagamento;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class Carrinho extends AppCompatActivity implements Observer {
 
     private ListView listViewCarrinho;
     private FirebaseFirestore db;
@@ -82,6 +97,9 @@ public class Carrinho extends AppCompatActivity {
             }
         });
 
+
+
+        /*
         finalizarCompra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,7 +110,7 @@ public class Carrinho extends AppCompatActivity {
                     startActivity(intent);
                 }
             }
-        });
+        });*/
     }
 
     private void adicionarCompra(ReservaProduto produto) {
@@ -130,6 +148,136 @@ public class Carrinho extends AppCompatActivity {
     }
 
 
+    public void comprar( View view ){
+        new MDDialog.Builder(this)
+                .setTitle("Dados do Pagamento")
+                .setContentView(R.layout.dados_pagamento)
+                .setNegativeButton("Cancelar", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getApplicationContext(),"Cancelar!", Toast.LENGTH_LONG).show();
+                    }
+                })
+                .setPositiveButton("Finalizar Compra", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        View root = v.getRootView();
+
+
+                        //botaoComprar(true);
+
+                        CartaoDeCredito cartao = new CartaoDeCredito( Carrinho.this );
+                        cartao.setNumCartao( pegarConteudoCampo( root, R.id.numcartao ) );
+                        cartao.setNomeCartao( pegarConteudoCampo( root, R.id.nomeCartao ) );
+                        cartao.setMes( pegarConteudoCampo( root, R.id.mesCartao ) );
+                        cartao.setAno( pegarConteudoCampo( root, R.id.anoCartao ) );
+                        cartao.setCvv( pegarConteudoCampo( root, R.id.cvv ) );
+                        cartao.setParcels(Integer.parseInt( pegarConteudoCampo(root, R.id.parcelas) ));
+
+                        pegarTokenPagamento( cartao );
+
+                        Toast.makeText(Carrinho.this,
+                                "Pagamento Aprovado. Em breve o Produto Estará em Suas Mãos.", Toast.LENGTH_LONG).show();
+                        sincronizarBanco();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+
+                    }
+                })
+                .create()
+                .show();
+    }
+
+    private String pegarConteudoCampo( View root, int id ){
+        EditText field = (EditText) root.findViewById(id);
+        return field.getText().toString();
+    }
+
+
+    private void pegarTokenPagamento(CartaoDeCredito cartaoDeCredito){
+        WebView webView = (WebView) findViewById(R.id.web_view);
+        webView.getSettings().setJavaScriptEnabled( true );
+        webView.addJavascriptInterface(cartaoDeCredito, "Android");
+        webView.loadUrl("file:///android_asset/index.html");
+    }
+
+
+    private void showMessage(final String messagem){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(Carrinho.this, messagem, Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+
+    @Override
+    public void update(Observable o, Object arg) {
+        CartaoDeCredito cartao = (CartaoDeCredito) o;
+
+        if (cartao.getToken() ==  null){
+            //botaoComprar(false);
+            showMessage(cartao.getError());
+
+            return;
+        }
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://vegetablepi.000webhostapp.com/?android-pagamento/")
+                //.baseUrl("https://vegetablepi.000webhostapp.com/android-pagamento/")
+                //.baseUrl("http://localhost/android-pagamento/")//esta no localhost. precisa passar pro servidor
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        Produto produto = new Produto();
+
+        ConexaoPagamento conexaoPagamento = retrofit.create(ConexaoPagamento.class);
+        Call<String> requester = conexaoPagamento.enviarPagamento(
+                produto.getPrecoIndividual(),//pega o preço total do carrinho
+                cartao.getToken(),
+                cartao.getParcels()
+        );
+
+        requester.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                //botaoComprar(false);
+                showMessage(response.body());
+
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                //botaoComprar(false);
+                Log.e("log_falha", "Error: " + t.getMessage());
+            }
+        });
+    }
+
+    /*
+    private void botaoComprar(final Boolean estado){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                String label;
+
+                label = getResources().getString(R.string.btnComprar);
+                if (estado){
+                    label = getResources().getString(R.string.btnComprando);
+
+                }else if(estado == false){
+                    Toast.makeText(Carrinho.this,
+                            "Pagamento Aprovado. Em breve o Produto Estará em Suas Mãos.", Toast.LENGTH_LONG).show();
+
+                }
+
+                ((Button) findViewById(R.id.btnComprar)).setText(label);
+
+            }
+        });
+    }
+    */
 
 }
 

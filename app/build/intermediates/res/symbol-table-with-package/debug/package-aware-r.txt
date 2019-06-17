@@ -662,6 +662,13 @@ color material_grey_600
 color material_grey_800
 color material_grey_850
 color material_grey_900
+color md_dialog_black_light
+color md_dialog_divider_dark
+color md_dialog_divider_light
+color md_dialog_gray_dark
+color md_dialog_green_dark
+color md_dialog_green_light
+color md_dialog_trans
 color mtrl_bottom_nav_colored_item_tint
 color mtrl_bottom_nav_item_tint
 color mtrl_btn_bg_color_disabled
@@ -864,6 +871,20 @@ dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
 dimen largura_botoes_menu
 dimen largura_padrao
+dimen md_dialog_bottom_button_padding
+dimen md_dialog_bottom_button_textsize
+dimen md_dialog_buttons_height
+dimen md_dialog_content_textview_height
+dimen md_dialog_content_textview_padding_left
+dimen md_dialog_content_textview_textsize
+dimen md_dialog_margin
+dimen md_dialog_title_button_margin_right
+dimen md_dialog_title_height
+dimen md_dialog_title_imageview_height
+dimen md_dialog_title_imageview_margin_left
+dimen md_dialog_title_imageview_margin_right
+dimen md_dialog_title_textview_padding
+dimen md_dialog_title_textview_textsize
 dimen mtrl_bottomappbar_fabOffsetEndMode
 dimen mtrl_bottomappbar_fab_cradle_margin
 dimen mtrl_bottomappbar_fab_cradle_rounded_corner_radius
@@ -1075,6 +1096,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable main_icon
+drawable master_card
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1092,12 +1114,19 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable visa
 id ALT
+id Ano
 id CTRL
+id CVV
 id FUNCTION
 id META
+id Mes
+id NomeCartao
+id NumeroCartao
 id SHIFT
 id SYM
+id ValidadeCartao
 id action0
 id action_bar
 id action_bar_activity_content
@@ -1124,6 +1153,7 @@ id adjust_width
 id alertTitle
 id all
 id always
+id anoCartao
 id async
 id auto
 id barrier
@@ -1142,6 +1172,8 @@ id bt_listar_produto
 id bt_logoff
 id bt_remover
 id bt_vendas
+id btn_no
+id btn_yes
 id buttonPanel
 id cancel_action
 id center
@@ -1159,6 +1191,7 @@ id contentPanel
 id coordinator
 id custom
 id customPanel
+id cvv
 id dark
 id decor_content_parent
 id default_activity_button
@@ -1203,6 +1236,8 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id iv_title
+id l_cvv
 id label_Quantidade
 id labeled
 id largeLabel
@@ -1216,10 +1251,14 @@ id list_view_carrinho
 id listaItens
 id lista_compras
 id lista_vendas
+id ll_card_number
+id ll_container
+id ll_content
 id login_form
 id login_progress
 id masked
 id media_actions
+id mesCartao
 id message
 id middle
 id mini
@@ -1230,6 +1269,7 @@ id mtrl_internal_children_alpha_tag
 id multiply
 id navigation_header_container
 id never
+id nomeCartao
 id nome_comprador
 id nome_produto
 id nome_vendedor
@@ -1238,9 +1278,11 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numcartao
 id outline
 id packed
 id parallax
+id parcelas
 id parent
 id parentPanel
 id parent_matrix
@@ -1259,6 +1301,8 @@ id rbPorUn
 id right
 id right_icon
 id right_side
+id rl_buttons
+id rl_title
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1330,6 +1374,7 @@ id textinput_helper_text
 id tfNome
 id tfPreco
 id tfQuantidade
+id til_parcels
 id time
 id title
 id titleDividerNoCustom
@@ -1344,6 +1389,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id tv_preco_KG_UN
+id tv_title
 id txtBemVindo
 id txt_Kg_ou_Un
 id txt_Quantidade
@@ -1358,6 +1404,7 @@ id useLogo
 id view_offset_helper
 id visible
 id webView
+id web_view
 id wide
 id withText
 id wrap
@@ -1420,6 +1467,7 @@ layout activity_login
 layout activity_main
 layout activity_pagamento_pay_pal
 layout activity_vendas
+layout dados_pagamento
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1434,6 +1482,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout layout_mddialog
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -2055,6 +2104,7 @@ style Widget_MaterialComponents_TextInputLayout_OutlinedBox
 style Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense
 style Widget_MaterialComponents_Toolbar
 style Widget_Support_CoordinatorLayout
+style dialog
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

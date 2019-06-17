@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: cn.carbs.android:MDDialog:1.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80c50f584583e2e9876a546f8058784c/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80c50f584583e2e9876a546f8058784c/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.carbs.android/MDDialog/1.0.0/d64a1ac30786ec067951859ba26645f546db2b63/MDDialog-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
