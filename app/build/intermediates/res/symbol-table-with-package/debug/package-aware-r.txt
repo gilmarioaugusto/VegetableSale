@@ -950,6 +950,7 @@ dimen notification_top_pad
 dimen notification_top_pad_large_text
 dimen tamanho_botao_add
 dimen tamanho_botao_carrinho
+dimen tamanho_bt_logoff
 dimen tamanho_floating_button_carrinho
 dimen tamanho_guias_detalhe_transacao
 dimen tamanho_texto_detalhes_transacao
@@ -1061,6 +1062,7 @@ drawable bt_check
 drawable bt_compras
 drawable bt_delivery
 drawable bt_exit_background
+drawable bt_relatorio
 drawable bt_search_background
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -1170,6 +1172,7 @@ id bt_finalizar_compra
 id bt_floating_carrinho
 id bt_listar_produto
 id bt_logoff
+id bt_relatorio
 id bt_remover
 id bt_vendas
 id btn_no
@@ -1203,6 +1206,8 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id editDataFinal
+id editDataInicial
 id edit_query
 id email
 id email_login_form
@@ -1360,6 +1365,8 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView10
+id textView11
+id textView12
 id textView2
 id textView3
 id textView4
@@ -1466,6 +1473,7 @@ layout activity_listar_produtos
 layout activity_login
 layout activity_main
 layout activity_pagamento_pay_pal
+layout activity_tela_relatorios
 layout activity_vendas
 layout dados_pagamento
 layout design_bottom_navigation_item

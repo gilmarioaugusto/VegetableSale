@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btChamarCarrinho;
     private ImageButton btChamarCompras;
     private ImageButton btChamarVendas;
-    private DatabaseReference mBanco;
+    private ImageButton btChamarRelatorios;
 
 
     @Override
@@ -89,6 +89,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Vendas.class));
+            }
+        });
+
+        btChamarRelatorios = findViewById(R.id.bt_relatorio);
+        btChamarRelatorios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), TelaRelatorios.class));
             }
         });
     }

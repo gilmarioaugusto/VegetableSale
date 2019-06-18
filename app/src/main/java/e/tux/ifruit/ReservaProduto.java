@@ -21,13 +21,6 @@ public class ReservaProduto extends Produto implements Serializable {
         this.comprador = comprador;
     }
 
-    public ReservaProduto(String nome, double precoIndividual, String proprietario, int quantidadeDisponivel,
-                          boolean porUnidade, double precoDaCompra, double quantidadeComprada) {
-        super(nome, precoIndividual, proprietario, quantidadeDisponivel, porUnidade);
-        this.precoDaCompra = precoDaCompra;
-        this.quantidadeComprada = quantidadeComprada;
-    }
-
     @Override
     public String toString() {
         decimalFormat = new DecimalFormat("0.00");

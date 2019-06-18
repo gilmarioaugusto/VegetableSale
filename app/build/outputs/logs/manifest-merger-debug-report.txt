@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-62:12
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-63:12
 MERGED from [com.android.support:multidex:1.0.2] /home/tux/.gradle/caches/transforms-2/files-2.1/29baff771dfee533f2b39c80f9547b44/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:28.0.0] /home/tux/.gradle/caches/transforms-2/files-2.1/c53a5b045648aa1446797f408308554a/AndroidManifest.xml:17:1-24:12
 MERGED from [cn.carbs.android:MDDialog:1.0.0] /home/tux/.gradle/caches/transforms-2/files-2.1/80c50f584583e2e9876a546f8058784c/AndroidManifest.xml:2:1-17:12
@@ -64,20 +64,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/tux/.gradle/cache
 MERGED from [android.arch.core:runtime:1.1.1] /home/tux/.gradle/caches/transforms-2/files-2.1/d9751b519fd9806cae77634680efe526/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /home/tux/.gradle/caches/transforms-2/files-2.1/88cdad09c193cd77cab8561dd5299969/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] /home/tux/.gradle/caches/transforms-2/files-2.1/c478a782d9b0b88b49de02d71ff6c593/AndroidManifest.xml:2:1-11:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:3:5-27
 		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
 		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-62:12
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-63:12
 		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-62:12
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:1-63:12
 		INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:2:11-69
@@ -112,7 +112,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /h
 	android:name
 		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:8:22-64
 application
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:10:5-60:19
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:10:5-61:19
 MERGED from [com.android.support:design:28.0.0] /home/tux/.gradle/caches/transforms-2/files-2.1/c53a5b045648aa1446797f408308554a/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /home/tux/.gradle/caches/transforms-2/files-2.1/c53a5b045648aa1446797f408308554a/AndroidManifest.xml:22:5-20
 MERGED from [cn.carbs.android:MDDialog:1.0.0] /home/tux/.gradle/caches/transforms-2/files-2.1/80c50f584583e2e9876a546f8058784c/AndroidManifest.xml:11:5-15:19
@@ -181,92 +181,96 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /home/tux/.gradle/c
 		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:11:9-35
 	android:theme
 		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:15:9-40
+activity#e.tux.ifruit.TelaRelatorios
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:16:9-61
+	android:name
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:16:19-49
 activity#e.tux.ifruit.DetalheTransacao
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:16:9-19:57
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:17:9-20:58
 	android:parentActivityName
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:19:13-55
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:20:13-55
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:18:13-50
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:19:13-50
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:17:13-45
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:18:13-45
 activity#e.tux.ifruit.Vendas
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:20:9-23:57
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:21:9-24:58
 	android:parentActivityName
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:23:13-55
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:24:13-55
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:22:13-46
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:23:13-46
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:21:13-35
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:22:13-35
 activity#e.tux.ifruit.Compras
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:24:9-27:57
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:25:9-28:58
 	android:parentActivityName
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:27:13-55
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:28:13-55
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:26:13-47
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:27:13-47
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:25:13-36
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:26:13-36
 activity#e.tux.ifruit.AdicionarCarrinho
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:28:9-31:58
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:29:9-32:58
 	android:parentActivityName
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:31:13-55
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:32:13-55
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:30:13-58
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:31:13-58
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:29:13-46
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:30:13-46
 activity#e.tux.ifruit.Carrinho
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:32:9-35:58
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:33:9-36:58
 	android:parentActivityName
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:35:13-55
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:36:13-55
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:34:13-41
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:35:13-41
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:33:13-37
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:34:13-37
 activity#e.tux.ifruit.pagamento.PagamentoPayPal
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:36:9-39:60
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:37:9-40:60
 	android:parentActivityName
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:39:13-57
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:40:13-57
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:38:13-42
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:39:13-42
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:37:13-54
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:38:13-54
 activity#e.tux.ifruit.ListarProdutos
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:40:9-43:58
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:41:9-44:58
 	android:parentActivityName
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:43:13-55
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:44:13-55
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:42:13-46
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:43:13-46
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:41:13-43
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:42:13-43
 activity#e.tux.ifruit.CadastrarProduto
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:44:9-47:58
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:45:9-48:58
 	android:parentActivityName
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:47:13-55
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:48:13-55
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:46:13-49
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:47:13-49
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:45:13-45
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:46:13-45
 activity#e.tux.ifruit.LoginActivity
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:48:9-50:60
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:49:9-51:60
 	android:label
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:50:13-57
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:51:13-57
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:49:13-42
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:50:13-42
 activity#e.tux.ifruit.MainActivity
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:51:9-59:20
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:52:9-60:20
 	android:screenOrientation
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:53:13-49
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:54:13-49
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:52:13-41
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:53:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:54:13-58:29
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:55:13-59:29
 action#android.intent.action.MAIN
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:55:17-69
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:56:17-69
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:55:25-66
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:56:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:57:17-77
+ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:58:17-77
 	android:name
-		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:57:27-74
+		ADDED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml:58:27-74
 uses-sdk
 INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/tux/AndroidStudioProjects/iFruit/app/src/main/AndroidManifest.xml

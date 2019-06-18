@@ -3,13 +3,11 @@ package e.tux.ifruit;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -24,7 +22,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
@@ -122,6 +122,8 @@ public class Carrinho extends AppCompatActivity implements Observer {
         produtoComprado.setPorUnidade(produto.getPorUnidade());
         produtoComprado.setPrecoIndividual(produto.getPrecoIndividual());
         produtoComprado.setProprietario(produto.getProprietario());
+        String dataCompra = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+        produtoComprado.setDataDaCompra(dataCompra);
         db.collection("transacoes").document(produtoComprado.getComprador()).collection("compras").add(produtoComprado);
         db.collection("transacoes").document(produtoComprado.getProprietario()).collection("vendas").add(produtoComprado);
     }

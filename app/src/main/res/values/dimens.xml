@@ -13,4 +13,5 @@
     <dimen name="tamanho_floating_button_carrinho">60dp</dimen>
     <dimen name="tamanho_texto_detalhes_transacao">25sp</dimen>
     <dimen name="tamanho_guias_detalhe_transacao">18sp</dimen>
+    <dimen name="tamanho_bt_logoff">80dp</dimen>
 </resources>
