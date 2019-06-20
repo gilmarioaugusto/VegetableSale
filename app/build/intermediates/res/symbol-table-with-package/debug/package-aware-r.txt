@@ -569,6 +569,7 @@ bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
+color aaa_preto
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1061,6 +1062,7 @@ drawable bt_carrinho_circular
 drawable bt_check
 drawable bt_compras
 drawable bt_delivery
+drawable bt_editar_usuario
 drawable bt_exit_background
 drawable bt_ok_button
 drawable bt_relatorio
@@ -1161,11 +1163,13 @@ id always
 id anoCartao
 id async
 id auto
+id autoTextViewUsuarioTipo
 id barrier
 id beginning
 id blocking
 id bottom
 id btCadastrarProduto
+id bt_UserConfig
 id bt_adicionar
 id bt_adicionar_ao_carrinho
 id bt_cadastrar_produto
@@ -1181,7 +1185,10 @@ id bt_remover
 id bt_vendas
 id btn_no
 id btn_yes
+id buttonAlterarSenha
 id buttonPanel
+id buttonTornarAdministrador
+id buttonTornarVendedor
 id cancel_action
 id center
 id center_horizontal
@@ -1212,6 +1219,8 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id editTextAlterSenha
+id editTextConfirmAlterSenha
 id edit_query
 id email
 id email_login_form
@@ -1367,6 +1376,9 @@ id text2
 id textInputLayout
 id textInputLayout2
 id textInputLayout3
+id textInputLayout4
+id textInputLayout5
+id textInputLayout6
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -1377,6 +1389,7 @@ id textView12
 id textView13
 id textView14
 id textView15
+id textView16
 id textView18
 id textView19
 id textView2
@@ -1497,6 +1510,7 @@ layout activity_login
 layout activity_main
 layout activity_pagamento_pay_pal
 layout activity_tela_relatorios
+layout activity_user_config
 layout activity_vendas
 layout dados_pagamento
 layout design_bottom_navigation_item

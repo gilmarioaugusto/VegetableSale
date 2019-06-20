@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btChamarCompras;
     private ImageButton btChamarVendas;
     private ImageButton btChamarRelatorios;
+    private ImageButton btUserConfig;
 
 
     @Override
@@ -97,6 +98,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), TelaRelatorios.class));
+            }
+        });
+
+        btUserConfig = findViewById(R.id.bt_UserConfig);
+        btUserConfig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), UserConfig.class);
+                //ADICIONAR EXTRA A INTENT
+                startActivity(i);
             }
         });
     }

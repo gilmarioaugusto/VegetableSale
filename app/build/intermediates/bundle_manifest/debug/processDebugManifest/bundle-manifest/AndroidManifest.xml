@@ -30,7 +30,14 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="e.tux.ifruit.TelaRelatorios" />
+        <activity
+            android:name="e.tux.ifruit.UserConfig"
+            android:label="Configurações de Usuário"
+            android:parentActivityName="e.tux.ifruit.MainActivity" />
+        <activity
+            android:name="e.tux.ifruit.TelaRelatorios"
+            android:label="Relatório"
+            android:parentActivityName="e.tux.ifruit.MainActivity" />
         <activity
             android:name="e.tux.ifruit.DetalheTransacao"
             android:label="Detalhes da Transação"
