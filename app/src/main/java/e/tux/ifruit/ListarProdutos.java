@@ -32,7 +32,7 @@ public class ListarProdutos extends AppCompatActivity {
     private TextView txTeste;
     private TextView txTeste2;
     private FirebaseAuth mAuth;
-    private FirebaseUser user;
+    private String user;
     private ArrayAdapter listaAdaptador;
     private ArrayList<Produto> listaProdutos;
     private CollectionReference produtosRef;
@@ -51,7 +51,7 @@ public class ListarProdutos extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
-        user = mAuth.getCurrentUser();
+        user = mAuth.getCurrentUser().getEmail();
         listView =findViewById(R.id.listaItens);
         abrirCarrinho = findViewById(R.id.bt_floating_carrinho);
 
@@ -81,7 +81,9 @@ public class ListarProdutos extends AppCompatActivity {
                     for (QueryDocumentSnapshot document : queryDocumentSnapshots){
                         Produto produto = new Produto();
                         produto = document.toObject(Produto.class);
-                        listaProdutos.add(produto);
+                        if (! produto.getProprietario().equals(user)) {
+                            listaProdutos.add(produto);
+                        }
                     }
 
                 setListViewProdutos(listaProdutos);

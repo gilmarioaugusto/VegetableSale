@@ -496,6 +496,10 @@
         "source": "/home/tux/.gradle/caches/transforms-2/files-2.1/74ed87173764471cab98bbc13fedcd8b/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/res/merged/debug/drawable_bt_ok_button.png.flat",
+        "source": "/home/tux/AndroidStudioProjects/iFruit/app/src/main/res/drawable/bt_ok_button.png"
+    },
+    {
         "merged": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_light.xml.flat",
         "source": "/home/tux/.gradle/caches/transforms-2/files-2.1/74ed87173764471cab98bbc13fedcd8b/res/color/abc_primary_text_disable_only_material_light.xml"
     },

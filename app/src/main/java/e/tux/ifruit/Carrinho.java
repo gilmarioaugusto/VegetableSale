@@ -124,7 +124,7 @@ public class Carrinho extends AppCompatActivity implements Observer {
         produtoComprado.setProprietario(produto.getProprietario());
         String dataCompra = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
         produtoComprado.setDataDaCompra(dataCompra);
-        db.collection("transacoes").document(produtoComprado.getComprador()).collection("compras").add(produtoComprado);
+        db.collection("transacoes").document(produtoComprado.getComprador()).collection("compras").document(dataCompra).set(produtoComprado);
         db.collection("transacoes").document(produtoComprado.getProprietario()).collection("vendas").add(produtoComprado);
     }
 
