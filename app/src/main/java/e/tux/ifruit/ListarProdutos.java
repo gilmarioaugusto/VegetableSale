@@ -81,7 +81,7 @@ public class ListarProdutos extends AppCompatActivity {
                     for (QueryDocumentSnapshot document : queryDocumentSnapshots){
                         Produto produto = new Produto();
                         produto = document.toObject(Produto.class);
-                        if (! produto.getProprietario().equals(user)) {
+                        if (! produto.getProprietario().equals(user) && produto.getQuantidadeDisponivel()>0) {
                             listaProdutos.add(produto);
                         }
                     }

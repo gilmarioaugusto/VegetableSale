@@ -6,16 +6,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
 
     private Intent it;
     private TextView msg;
-    private FirebaseAuth mAuth;
+    private FirebaseAuth mAuthMain;
     private ImageButton btSair;
     private ImageButton btExibirProduto;
     private ImageButton btChamarCadastroProduto;
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btChamarVendas;
     private ImageButton btChamarRelatorios;
     private ImageButton btUserConfig;
+    private Usuario usuarioMain;
 
 
     @Override
@@ -31,23 +36,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseUser user = mAuth.getCurrentUser();
+        mAuthMain = FirebaseAuth.getInstance();
+        FirebaseUser userMain = mAuthMain.getCurrentUser();
 
-        if (user != null) {
+
+        if (userMain != null) {
             msg =  findViewById(R.id.txtBemVindo);
-            msg.setText(user.getEmail());
+            msg.setText(userMain.getEmail());
+            obterPermissoes(userMain);
         } else {
             it = new Intent(this, LoginActivity.class);
             startActivity(it);
             finish();
         }
 
+        usuarioMain = new Usuario();
+        usuarioMain.setEmail("email@email.com");
+        usuarioMain.setVendedor(false);
+        usuarioMain.setAdministrador(false);
+
+
+
         btChamarCadastroProduto = findViewById(R.id.bt_cadastrar_produto);
         btChamarCadastroProduto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), CadastrarProduto.class));
+                if (usuarioMain.isVendedor()) {
+                    startActivity(new Intent(getApplicationContext(), CadastrarProduto.class));
+                } else{
+                    Toast.makeText(getApplicationContext(), "Você não é um vendedor, solicite a permissão a um administrador!",0).show();
+                }
             }
         });
 
@@ -63,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         btSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.signOut();
+                mAuthMain.signOut();
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 finish();
             }
@@ -107,7 +125,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), UserConfig.class);
                 //ADICIONAR EXTRA A INTENT
+                i.putExtra("usuario",usuarioMain);
                 startActivity(i);
+            }
+        });
+    }
+
+    private void obterPermissoes(FirebaseUser user) {
+        FirebaseFirestore bancoMain = FirebaseFirestore.getInstance();
+        bancoMain.collection("usuarios").document(user.getEmail().toString()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                usuarioMain = documentSnapshot.toObject(Usuario.class);
             }
         });
     }

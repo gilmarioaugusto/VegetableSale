@@ -89,7 +89,7 @@ public class CadastrarProduto extends AppCompatActivity {
             produtoUp.setQuantidadeDisponivel(doubleQuantidade);
             produtoUp.setProprietario(user.getEmail());
             mDatabase.collection("produtos").document(strNome).set(produtoUp);
-            Toast.makeText(getApplicationContext(), "Produto Cadastrado", 1).show();
+            Toast.makeText(getApplicationContext(), "Produto Cadastrado", 0).show();
             limparCampos();
         }
     }

@@ -1936,12 +1936,12 @@
         "source": "/home/tux/.gradle/caches/transforms-2/files-2.1/12d770f3df7bf3e71ae2540607d2bcb0/res/layout/notification_action.xml"
     },
     {
-        "merged": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/res/merged/debug/drawable-v24_bt_check.png.flat",
-        "source": "/home/tux/AndroidStudioProjects/iFruit/app/src/main/res/drawable-v24/bt_check.png"
-    },
-    {
         "merged": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/res/merged/debug/drawable_bt_editar_usuario.png.flat",
         "source": "/home/tux/AndroidStudioProjects/iFruit/app/src/main/res/drawable/bt_editar_usuario.png"
+    },
+    {
+        "merged": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/res/merged/debug/drawable-v24_bt_check.png.flat",
+        "source": "/home/tux/AndroidStudioProjects/iFruit/app/src/main/res/drawable-v24/bt_check.png"
     },
     {
         "merged": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/res/merged/debug/drawable_abc_tab_indicator_material.xml.flat",

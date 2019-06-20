@@ -32,11 +32,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,6 +76,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
 
+    // Alterações
+    private ArrayList<String> listaEmailUsuarios;
+    FirebaseFirestore bancoLogin;
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +88,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
+
+        listaEmailUsuarios = new ArrayList<>();
+        obterLista();
+        System.out.println(listaEmailUsuarios);
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -111,6 +124,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+    }
+
+    private void obterLista() {
+        bancoLogin = FirebaseFirestore.getInstance();
+        bancoLogin.collection("usuarios").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                for (QueryDocumentSnapshot document : queryDocumentSnapshots){
+                    Usuario usuario = new Usuario();
+                    usuario = document.toObject(Usuario.class);
+                    listaEmailUsuarios.add(usuario.getEmail());
+                }
+            }
+        });
     }
 
     private void populateAutoComplete() {
@@ -172,7 +199,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mPasswordView.setError(null);
 
         // Store values at the time of the login attempt.
-        String email = mEmailView.getText().toString();
+        email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
@@ -205,13 +232,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // perform the user login attempt.
             showProgress(true);
             if (isNewUser){
-                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        showProgress(false);
-                        Toast.makeText(getApplicationContext(), "Usuário cadastrado com Sucesso!!",1).show();
-                    }
-                });
+                if (!listaEmailUsuarios.contains(email)) {
+                    mAuth.createUserWithEmailAndPassword(email, password);/*.addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            showProgress(false);
+                        }
+                    });*/
+                    addUsuario(email);
+                    showProgress(false);
+                    Toast.makeText(getApplicationContext(), "Usuário cadastrado com Sucesso!", 1).show();
+                } else{
+                    showProgress(false);
+                    Toast.makeText(getApplicationContext(), "Usuário já cadastrado!", 1).show();
+                }
             } else {
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -229,6 +263,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 });
             }
         }
+    }
+
+    private void addUsuario(String email) {
+        Usuario usuarioUp = new Usuario();
+        usuarioUp.setEmail(email);
+        usuarioUp.setAdministrador(false);
+        usuarioUp.setVendedor(false);
+        bancoLogin.collection("usuarios").document(email).set(usuarioUp);
     }
 
     private boolean isEmailValid(String email) {

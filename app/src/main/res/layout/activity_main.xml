@@ -7,136 +7,142 @@
     android:background="@color/background_principal"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="193dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bemvindo_banner" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/txtBemVindo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Bem-Vindo"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="O que deseja fazer?"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBemVindo" />
+            <ImageButton
+                android:id="@+id/bt_UserConfig"
+                android:layout_width="@dimen/tamanho_bt_logoff"
+                android:layout_height="@dimen/tamanho_bt_logoff"
+                android:layout_marginTop="8dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toStartOf="@+id/bt_logoff"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_vendas"
+                app:srcCompat="@drawable/bt_editar_usuario" />
 
-    <ImageButton
-        android:id="@+id/bt_cadastrar_produto"
-        android:layout_width="@dimen/largura_botoes_menu"
-        android:layout_height="@dimen/altura_botoes_menu"
-        android:layout_marginTop="12dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toStartOf="@+id/bt_listar_produto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@drawable/bt_add_background" />
+            <ImageButton
+                android:id="@+id/bt_vendas"
+                android:layout_width="@dimen/largura_botoes_menu"
+                android:layout_height="@dimen/altura_botoes_menu"
+                android:layout_marginTop="8dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toStartOf="@+id/bt_relatorio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_carrinho"
+                app:srcCompat="@drawable/bt_delivery" />
 
-    <ImageButton
-        android:id="@+id/bt_listar_produto"
-        android:layout_width="@dimen/largura_botoes_menu"
-        android:layout_height="@dimen/altura_botoes_menu"
-        android:layout_marginTop="12dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bt_cadastrar_produto"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@drawable/bt_search_background" />
+            <ImageButton
+                android:id="@+id/bt_logoff"
+                android:layout_width="@dimen/tamanho_bt_logoff"
+                android:layout_height="@dimen/tamanho_bt_logoff"
+                android:layout_marginTop="8dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bt_UserConfig"
+                app:layout_constraintTop_toBottomOf="@+id/bt_relatorio"
+                app:srcCompat="@drawable/bt_exit_background" />
 
-    <ImageButton
-        android:id="@+id/bt_carrinho"
-        android:layout_width="@dimen/largura_botoes_menu"
-        android:layout_height="@dimen/altura_botoes_menu"
-        android:layout_marginTop="4dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toStartOf="@+id/bt_compras"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_cadastrar_produto"
-        app:srcCompat="@drawable/bt_carrinho" />
+            <ImageButton
+                android:id="@+id/bt_cadastrar_produto"
+                android:layout_width="@dimen/largura_botoes_menu"
+                android:layout_height="@dimen/altura_botoes_menu"
+                android:layout_marginTop="7dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toStartOf="@+id/bt_listar_produto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:srcCompat="@drawable/bt_add_background" />
 
-    <ImageButton
-        android:id="@+id/bt_compras"
-        android:layout_width="@dimen/largura_botoes_menu"
-        android:layout_height="@dimen/altura_botoes_menu"
-        android:layout_marginTop="4dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bt_carrinho"
-        app:layout_constraintTop_toBottomOf="@+id/bt_listar_produto"
-        app:srcCompat="@drawable/bt_compras" />
+            <TextView
+                android:id="@+id/txtBemVindo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bem-Vindo"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageButton
-        android:id="@+id/bt_vendas"
-        android:layout_width="@dimen/largura_botoes_menu"
-        android:layout_height="@dimen/altura_botoes_menu"
-        android:layout_marginTop="4dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toStartOf="@+id/bt_relatorio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_carrinho"
-        app:srcCompat="@drawable/bt_delivery" />
+            <ImageButton
+                android:id="@+id/bt_compras"
+                android:layout_width="@dimen/largura_botoes_menu"
+                android:layout_height="@dimen/altura_botoes_menu"
+                android:layout_marginTop="8dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bt_carrinho"
+                app:layout_constraintTop_toBottomOf="@+id/bt_listar_produto"
+                app:srcCompat="@drawable/bt_compras" />
 
-    <ImageButton
-        android:id="@+id/bt_relatorio"
-        android:layout_width="@dimen/largura_botoes_menu"
-        android:layout_height="@dimen/altura_botoes_menu"
-        android:layout_marginTop="4dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bt_vendas"
-        app:layout_constraintTop_toBottomOf="@+id/bt_compras"
-        app:srcCompat="@drawable/bt_relatorio" />
+            <ImageButton
+                android:id="@+id/bt_relatorio"
+                android:layout_width="@dimen/largura_botoes_menu"
+                android:layout_height="@dimen/altura_botoes_menu"
+                android:layout_marginTop="8dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bt_vendas"
+                app:layout_constraintTop_toBottomOf="@+id/bt_compras"
+                app:srcCompat="@drawable/bt_relatorio" />
 
-    <ImageButton
-        android:id="@+id/bt_logoff"
-        android:layout_width="@dimen/tamanho_bt_logoff"
-        android:layout_height="@dimen/tamanho_bt_logoff"
-        android:layout_marginTop="16dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bt_UserConfig"
-        app:layout_constraintTop_toBottomOf="@+id/bt_relatorio"
-        app:srcCompat="@drawable/bt_exit_background" />
+            <ImageButton
+                android:id="@+id/bt_carrinho"
+                android:layout_width="@dimen/largura_botoes_menu"
+                android:layout_height="@dimen/altura_botoes_menu"
+                android:layout_marginTop="8dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toStartOf="@+id/bt_compras"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_cadastrar_produto"
+                app:srcCompat="@drawable/bt_carrinho" />
 
-    <ImageButton
-        android:id="@+id/bt_UserConfig"
-        android:layout_width="@dimen/tamanho_bt_logoff"
-        android:layout_height="@dimen/tamanho_bt_logoff"
-        android:layout_marginTop="16dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toStartOf="@+id/bt_logoff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_relatorio"
-        app:srcCompat="@drawable/bt_editar_usuario" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="193dp"
+                android:layout_height="68dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bemvindo_banner" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O que deseja fazer?"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtBemVindo" />
+
+            <ImageButton
+                android:id="@+id/bt_listar_produto"
+                android:layout_width="@dimen/largura_botoes_menu"
+                android:layout_height="@dimen/altura_botoes_menu"
+                android:layout_marginTop="7dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bt_cadastrar_produto"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:srcCompat="@drawable/bt_search_background" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

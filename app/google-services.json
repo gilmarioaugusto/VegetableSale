@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "434401681910-c3pi9k8di6pv8ieetk80ndkeq1dn15qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "e.tux.ifruit",
+            "certificate_hash": "fbd7816dd3daf98a1466abea5b6c54e59657e073"
+          }
+        },
+        {
           "client_id": "434401681910-u0j4rs0shon6kfr26eg6i1t2bpj85r0d.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -33,20 +41,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "434401681910-5fk0kuro24pebm961d03m5kfo8k5vmkj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

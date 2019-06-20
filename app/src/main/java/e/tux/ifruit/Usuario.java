@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Usuario implements Serializable {
 
     private String email;
-    private boolean vendendor;
+    private boolean vendedor;
     private boolean administrador;
 
     public Usuario() {
@@ -13,7 +13,7 @@ public class Usuario implements Serializable {
 
     public Usuario(String email, boolean vendendor, boolean administrador) {
         this.email = email;
-        this.vendendor = vendendor;
+        this.vendedor = vendendor;
         this.administrador = administrador;
     }
 
@@ -25,12 +25,12 @@ public class Usuario implements Serializable {
         this.email = email;
     }
 
-    public boolean isVendendor() {
-        return vendendor;
+    public boolean isVendedor() {
+        return vendedor;
     }
 
-    public void setVendendor(boolean vendendor) {
-        this.vendendor = vendendor;
+    public void setVendedor(boolean vendendor) {
+        this.vendedor = vendendor;
     }
 
     public boolean isAdministrador() {
