@@ -22,6 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -50,6 +51,9 @@ public class Carrinho extends AppCompatActivity implements Observer {
     private ImageButton finalizarCompra;
     private Produto produtoUp;
     private TextView txtVazio;
+    private Double totalCarrinho;
+    private TextView txtTotalCarrinho;
+    private DecimalFormat decimalFormat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +63,14 @@ public class Carrinho extends AppCompatActivity implements Observer {
         listaReservaProdutos = new ArrayList<>();
         listViewCarrinho = findViewById(R.id.list_view_carrinho);
 
+        decimalFormat = new DecimalFormat("0.00");
+
         finalizarCompra = findViewById(R.id.bt_finalizar_compra);
         finalizarCompra.setVisibility(View.INVISIBLE);
         txtVazio = findViewById(R.id.txt_vazio);
         txtVazio.setVisibility(View.INVISIBLE);
+        txtTotalCarrinho = findViewById(R.id.txt_total_carrinho);
+        totalCarrinho = 0.0;
 
         produtoUp = new Produto();
         db = FirebaseFirestore.getInstance();
@@ -77,7 +85,9 @@ public class Carrinho extends AppCompatActivity implements Observer {
                     ReservaProduto reservaProduto = new ReservaProduto();
                     reservaProduto = document.toObject(ReservaProduto.class);
                     listaReservaProdutos.add(reservaProduto);
+                    totalCarrinho = totalCarrinho + reservaProduto.getPrecoDaCompra()*reservaProduto.getQuantidadeComprada();
                 }
+                txtTotalCarrinho.setText("R$"+decimalFormat.format(totalCarrinho));
                 setListViewProdutos(listaReservaProdutos);
                 if (!listaReservaProdutos.isEmpty()){
                     finalizarCompra.setVisibility(View.VISIBLE);

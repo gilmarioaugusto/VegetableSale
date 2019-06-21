@@ -1390,6 +1390,7 @@ id textView13
 id textView14
 id textView15
 id textView16
+id textView17
 id textView18
 id textView19
 id textView2
@@ -1438,6 +1439,7 @@ id txt_Kg_ou_Un
 id txt_Quantidade
 id txt_Total
 id txt_nome_produto
+id txt_total_carrinho
 id txt_valor_produto
 id txt_vazio
 id uniform
