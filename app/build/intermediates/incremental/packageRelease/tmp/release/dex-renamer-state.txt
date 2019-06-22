@@ -1,7 +1,0 @@
-#Fri Jun 21 15:07:30 BRT 2019
-base.0=/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/dex/release/mergeDexRelease/out
-path.1=classes2.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/dex/release/mergeDexRelease/out

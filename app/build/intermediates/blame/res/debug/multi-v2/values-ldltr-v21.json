@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "C:\\Users\\YNARA\\AndroidStudioProjects\\iFruit\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/home/tux/.gradle/caches/transforms-2/files-2.1/74ed87173764471cab98bbc13fedcd8b/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "C:\\Users\\YNARA\\.gradle\\caches\\transforms-2\\files-2.1\\3c70423bd116eef62d363a9278a88e2e\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

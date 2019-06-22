@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "C:\\Users\\YNARA\\AndroidStudioProjects\\iFruit\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "/home/tux/.gradle/caches/transforms-2/files-2.1/74ed87173764471cab98bbc13fedcd8b/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\YNARA\\.gradle\\caches\\transforms-2\\files-2.1\\3c70423bd116eef62d363a9278a88e2e\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "/home/tux/.gradle/caches/transforms-2/files-2.1/8a53ab96b8ed2d6b5947a53c78cfb3e9/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\YNARA\\.gradle\\caches\\transforms-2\\files-2.1\\ac18b03f900ddb8779678cde90a5c6af\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

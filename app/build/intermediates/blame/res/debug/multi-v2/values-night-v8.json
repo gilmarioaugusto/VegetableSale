@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "C:\\Users\\YNARA\\AndroidStudioProjects\\iFruit\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/tux/.gradle/caches/transforms-2/files-2.1/74ed87173764471cab98bbc13fedcd8b/res/values-night-v8/values-night-v8.xml",
+                    "source": "C:\\Users\\YNARA\\.gradle\\caches\\transforms-2\\files-2.1\\3c70423bd116eef62d363a9278a88e2e\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

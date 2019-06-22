@@ -146,6 +146,7 @@ public class AdicionarCarrinho extends AppCompatActivity {
         }
         totalProduto = produtoCarregado.getPrecoIndividual()*Double.parseDouble(String.valueOf(txtQuantidade.getText()));
         txtTotal.setText("Total: R$"+decimalFormat.format(totalProduto));
+        String valorTotal = String.valueOf(txtTotal.getText().toString());
     }
 
     private void subtrairProduto(){

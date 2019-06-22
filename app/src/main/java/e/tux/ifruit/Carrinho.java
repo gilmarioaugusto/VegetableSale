@@ -1,14 +1,13 @@
 package e.tux.ifruit;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,25 +20,25 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.paypal.android.sdk.payments.PayPalConfiguration;
+import com.paypal.android.sdk.payments.PayPalPayment;
+import com.paypal.android.sdk.payments.PayPalService;
+import com.paypal.android.sdk.payments.PaymentActivity;
+import com.paypal.android.sdk.payments.PaymentConfirmation;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Observable;
 import java.util.Observer;
 
-import cn.carbs.android.library.MDDialog;
-import e.tux.ifruit.pagamento.CartaoDeCredito;
-import e.tux.ifruit.pagamento.ConexaoPagamento;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import e.tux.ifruit.pagamento.Config;
 
-public class Carrinho extends AppCompatActivity implements Observer {
+public class Carrinho extends AppCompatActivity {
 
     private ListView listViewCarrinho;
     private FirebaseFirestore db;
@@ -52,8 +51,23 @@ public class Carrinho extends AppCompatActivity implements Observer {
     private Produto produtoUp;
     private TextView txtVazio;
     private Double totalCarrinho;
-    private TextView txtTotalCarrinho;
+    private TextView valorTotalCarrinho;
     private DecimalFormat decimalFormat;
+
+
+    public static final int PAYPAL_REQUEST_CODE = 7171;
+
+    public static PayPalConfiguration configuracao = new PayPalConfiguration()
+            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
+            .clientId(Config.PAYPAL_CLIENT_ID);
+
+    String valorPagamento;
+
+    @Override
+    protected void onDestroy() {
+        stopService(new Intent(this, PayPalService.class));
+        super.onDestroy();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +83,10 @@ public class Carrinho extends AppCompatActivity implements Observer {
         finalizarCompra.setVisibility(View.INVISIBLE);
         txtVazio = findViewById(R.id.txt_vazio);
         txtVazio.setVisibility(View.INVISIBLE);
-        txtTotalCarrinho = findViewById(R.id.txt_total_carrinho);
-        totalCarrinho = 0.0;
+        valorTotalCarrinho = findViewById(R.id.txt_total_carrinho);
+        String valorCarregado = String.valueOf(valorTotalCarrinho.getText().toString());
+        valorCarregado = valorCarregado.replaceAll(",",".");
+        totalCarrinho = 0.00;
 
         produtoUp = new Produto();
         db = FirebaseFirestore.getInstance();
@@ -85,9 +101,9 @@ public class Carrinho extends AppCompatActivity implements Observer {
                     ReservaProduto reservaProduto = new ReservaProduto();
                     reservaProduto = document.toObject(ReservaProduto.class);
                     listaReservaProdutos.add(reservaProduto);
-                    totalCarrinho = totalCarrinho + reservaProduto.getPrecoDaCompra()*reservaProduto.getQuantidadeComprada();
+                    totalCarrinho = totalCarrinho + reservaProduto.getPrecoDaCompra();
                 }
-                txtTotalCarrinho.setText("R$"+decimalFormat.format(totalCarrinho));
+                valorTotalCarrinho.setText(decimalFormat.format(totalCarrinho));
                 setListViewProdutos(listaReservaProdutos);
                 if (!listaReservaProdutos.isEmpty()){
                     finalizarCompra.setVisibility(View.VISIBLE);
@@ -108,19 +124,60 @@ public class Carrinho extends AppCompatActivity implements Observer {
         });
 
 
+        //Ligando Serviço Paypal
+        Intent intent = new Intent(this, PayPalService.class);
+        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, configuracao);
+        startService(intent);
 
-        /*
         finalizarCompra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validarCartao()) {
-                    sincronizarBanco();
-                    Toast.makeText(getApplicationContext(), "Compra efetuada com sucesso!", 1).show();
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                }
+                processarPagamento(v);
+
             }
-        });*/
+
+        });
+    }
+
+    public void processarPagamento(View view) {
+        valorPagamento = totalCarrinho.toString();
+
+        PayPalPayment pagamentoPayPal =
+                new PayPalPayment(new BigDecimal(String.valueOf(valorPagamento)), "BRL",
+                        "Pagando para vegetable Sale", PayPalPayment.PAYMENT_INTENT_SALE);
+
+        Intent intent = new Intent(this, PaymentActivity.class);
+        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, configuracao);
+        intent.putExtra(PaymentActivity.EXTRA_PAYMENT, pagamentoPayPal);
+        startActivityForResult(intent, PAYPAL_REQUEST_CODE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == PAYPAL_REQUEST_CODE){
+                if (resultCode == RESULT_OK){
+                    PaymentConfirmation confirmPagamento =
+                            data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
+
+                    if (confirmPagamento != null){
+                            try {
+                                String detalhesPagamento = confirmPagamento.toJSONObject().toString(4);
+
+                                startActivity(new Intent(this, DetalheTransacao.class)
+                                    .putExtra("detalhesPagamento", detalhesPagamento)
+                                        .putExtra("valorPagamento", valorPagamento)
+                                    );
+
+                            }catch (JSONException e){
+                                e.printStackTrace();
+                            }
+                    }
+                }else if (requestCode == Activity.RESULT_CANCELED){
+                    Toast.makeText(this, "Compra Cancelada!", Toast.LENGTH_SHORT).show();
+                }
+        }else if (resultCode ==  PaymentActivity.RESULT_EXTRAS_INVALID){
+            Toast.makeText(this, "Compra Inválida!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void adicionarCompra(ReservaProduto produto) {
@@ -136,11 +193,6 @@ public class Carrinho extends AppCompatActivity implements Observer {
         produtoComprado.setDataDaCompra(dataCompra);
         db.collection("transacoes").document(produtoComprado.getComprador()).collection("compras").document(dataCompra).set(produtoComprado);
         db.collection("transacoes").document(produtoComprado.getProprietario()).collection("vendas").add(produtoComprado);
-    }
-
-    //MÉTODO RESPONSÁVEL POR VALIDAR O RETORNO DA WEBVIEW DO CARTÃO
-    private boolean validarCartao() {
-        return true;
     }
 
     private void sincronizarBanco() {
@@ -159,137 +211,6 @@ public class Carrinho extends AppCompatActivity implements Observer {
         listViewCarrinho.setAdapter(carrinhoAdaptador);
     }
 
-
-    public void comprar( View view ){
-        new MDDialog.Builder(this)
-                .setTitle("Dados do Pagamento")
-                .setContentView(R.layout.dados_pagamento)
-                .setNegativeButton("Cancelar", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(getApplicationContext(),"Cancelar!", Toast.LENGTH_LONG).show();
-                    }
-                })
-                .setPositiveButton("Finalizar Compra", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        View root = v.getRootView();
-
-
-                        //botaoComprar(true);
-
-                        CartaoDeCredito cartao = new CartaoDeCredito( Carrinho.this );
-                        cartao.setNumCartao( pegarConteudoCampo( root, R.id.numcartao ) );
-                        cartao.setNomeCartao( pegarConteudoCampo( root, R.id.nomeCartao ) );
-                        cartao.setMes( pegarConteudoCampo( root, R.id.mesCartao ) );
-                        cartao.setAno( pegarConteudoCampo( root, R.id.anoCartao ) );
-                        cartao.setCvv( pegarConteudoCampo( root, R.id.cvv ) );
-                        cartao.setParcels(Integer.parseInt( pegarConteudoCampo(root, R.id.parcelas) ));
-
-                        pegarTokenPagamento( cartao );
-
-                        Toast.makeText(Carrinho.this,
-                                "Pagamento Aprovado. Em breve o Produto Estará em Suas Mãos.", Toast.LENGTH_LONG).show();
-                        sincronizarBanco();
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
-
-                    }
-                })
-                .create()
-                .show();
-    }
-
-    private String pegarConteudoCampo( View root, int id ){
-        EditText field = (EditText) root.findViewById(id);
-        return field.getText().toString();
-    }
-
-
-    private void pegarTokenPagamento(CartaoDeCredito cartaoDeCredito){
-        WebView webView = (WebView) findViewById(R.id.web_view);
-        webView.getSettings().setJavaScriptEnabled( true );
-        webView.addJavascriptInterface(cartaoDeCredito, "Android");
-        webView.loadUrl("file:///android_asset/index.html");
-    }
-
-
-    private void showMessage(final String messagem){
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(Carrinho.this, messagem, Toast.LENGTH_LONG).show();
-            }
-        });
-
-    }
-
-
-    @Override
-    public void update(Observable o, Object arg) {
-        CartaoDeCredito cartao = (CartaoDeCredito) o;
-
-        if (cartao.getToken() ==  null){
-            //botaoComprar(false);
-            showMessage(cartao.getError());
-
-            return;
-        }
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://vegetablepi.000webhostapp.com/?android-pagamento/")
-                //.baseUrl("https://vegetablepi.000webhostapp.com/android-pagamento/")
-                //.baseUrl("http://localhost/android-pagamento/")//esta no localhost. precisa passar pro servidor
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        Produto produto = new Produto();
-
-        ConexaoPagamento conexaoPagamento = retrofit.create(ConexaoPagamento.class);
-        Call<String> requester = conexaoPagamento.enviarPagamento(
-                produto.getPrecoIndividual(),//pega o preço total do carrinho
-                cartao.getToken(),
-                cartao.getParcels()
-        );
-
-        requester.enqueue(new Callback<String>() {
-            @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-                //botaoComprar(false);
-                showMessage(response.body());
-
-            }
-
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-                //botaoComprar(false);
-                Log.e("log_falha", "Error: " + t.getMessage());
-            }
-        });
-    }
-
-    /*
-    private void botaoComprar(final Boolean estado){
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                String label;
-
-                label = getResources().getString(R.string.btnComprar);
-                if (estado){
-                    label = getResources().getString(R.string.btnComprando);
-
-                }else if(estado == false){
-                    Toast.makeText(Carrinho.this,
-                            "Pagamento Aprovado. Em breve o Produto Estará em Suas Mãos.", Toast.LENGTH_LONG).show();
-
-                }
-
-                ((Button) findViewById(R.id.btnComprar)).setText(label);
-
-            }
-        });
-    }
-    */
 
 }
 

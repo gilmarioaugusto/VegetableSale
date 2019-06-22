@@ -1,10 +1,10 @@
-#Fri Jun 21 16:16:43 BRT 2019
+#Fri Jun 21 21:00:58 GFT 2019
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/dex/debug/mergeExtDexDebug/out
-base.1=/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
-base.0=/home/tux/AndroidStudioProjects/iFruit/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+base.2=C\:\\Users\\YNARA\\AndroidStudioProjects\\iFruit\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+base.1=C\:\\Users\\YNARA\\AndroidStudioProjects\\iFruit\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+base.0=C\:\\Users\\YNARA\\AndroidStudioProjects\\iFruit\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out

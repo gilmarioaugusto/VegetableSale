@@ -17,18 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
-    <ImageButton
-        android:id="@+id/bt_finalizar_compra"
-        android:layout_width="@dimen/tamanho_botao_add"
-        android:layout_height="@dimen/tamanho_botao_add"
-        android:layout_marginBottom="16dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitXY"
-        android:onClick="comprar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bt_check" />
+
 
     <TextView
         android:id="@+id/txt_vazio"
@@ -46,12 +35,18 @@
         app:layout_constraintTop_toTopOf="@+id/list_view_carrinho"
         tools:visibility="invisible" />
 
-    <WebView
-        android:id="@+id/web_view"
-        android:layout_width="0.1dp"
-        android:layout_height="0.1dp">
-
-    </WebView>
+    <ImageButton
+        android:id="@+id/bt_finalizar_compra"
+        android:layout_width="@dimen/tamanho_botao_add"
+        android:layout_height="@dimen/tamanho_botao_add"
+        android:layout_marginBottom="16dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        android:onClick="processarPagamento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bt_check" />
 
     <TextView
         android:id="@+id/textView17"

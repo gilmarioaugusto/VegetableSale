@@ -5,6 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.google.android.gms.common.internal.PendingResultUtil;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.text.DecimalFormat;
 
 public class DetalheTransacao extends AppCompatActivity {
@@ -17,8 +22,11 @@ public class DetalheTransacao extends AppCompatActivity {
     private TextView precoIndividual;
     private TextView tvTotalCompra;
     private TextView tvPrecoKgUn;
+    private TextView idTransacao;
     private double totalCompra;
+    //private TextView status;
     private DecimalFormat decimalFormat;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +40,19 @@ public class DetalheTransacao extends AppCompatActivity {
         precoIndividual = findViewById(R.id.preco_individual);
         tvTotalCompra = findViewById(R.id.total_compra);
         tvPrecoKgUn = findViewById(R.id.tv_preco_KG_UN);
+        idTransacao = findViewById(R.id.IDTransacao);
+        //status = findViewById(R.id.statusPagamento);
         decimalFormat = new DecimalFormat("0.00");
+
+        //Pegando Detalhes da Transação
+        Intent intent = getIntent();
+
+        try {
+            JSONObject json = new JSONObject(intent.getStringExtra("detalhesPagamento"));
+            mostrarDetalhes(json.getJSONObject("response"), intent.getStringExtra("valorPagamento"));
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
 
         Intent i = getIntent();
         produtoComprado = (ProdutoComprado) i.getSerializableExtra("produto");
@@ -50,7 +70,21 @@ public class DetalheTransacao extends AppCompatActivity {
             }
             precoIndividual.setText("R$"+String.valueOf(produtoComprado.getPrecoIndividual()));
             totalCompra = produtoComprado.getPrecoIndividual()*produtoComprado.getQuantidadeComprada();
-            tvTotalCompra.setText("R$"+decimalFormat.format(totalCompra));
+            tvTotalCompra.setText("R$ "+decimalFormat.format(totalCompra));
         }
     }
+
+    private void mostrarDetalhes(JSONObject response, String valorPagamento) {
+       try {
+           idTransacao.setText(response.getString("id"));
+           //totalCompra.setText("R$ " + valorPagamento);
+           //status.setText(response.getString("state"));
+
+       }catch (JSONException e){
+            e.printStackTrace();
+       }
+
+    }
+
+
 }

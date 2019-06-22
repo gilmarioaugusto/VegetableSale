@@ -663,13 +663,6 @@ color material_grey_600
 color material_grey_800
 color material_grey_850
 color material_grey_900
-color md_dialog_black_light
-color md_dialog_divider_dark
-color md_dialog_divider_light
-color md_dialog_gray_dark
-color md_dialog_green_dark
-color md_dialog_green_light
-color md_dialog_trans
 color mtrl_bottom_nav_colored_item_tint
 color mtrl_bottom_nav_item_tint
 color mtrl_btn_bg_color_disabled
@@ -872,20 +865,6 @@ dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
 dimen largura_botoes_menu
 dimen largura_padrao
-dimen md_dialog_bottom_button_padding
-dimen md_dialog_bottom_button_textsize
-dimen md_dialog_buttons_height
-dimen md_dialog_content_textview_height
-dimen md_dialog_content_textview_padding_left
-dimen md_dialog_content_textview_textsize
-dimen md_dialog_margin
-dimen md_dialog_title_button_margin_right
-dimen md_dialog_title_height
-dimen md_dialog_title_imageview_height
-dimen md_dialog_title_imageview_margin_left
-dimen md_dialog_title_imageview_margin_right
-dimen md_dialog_title_textview_padding
-dimen md_dialog_title_textview_textsize
 dimen mtrl_bottomappbar_fabOffsetEndMode
 dimen mtrl_bottomappbar_fab_cradle_margin
 dimen mtrl_bottomappbar_fab_cradle_rounded_corner_radius
@@ -1067,6 +1046,14 @@ drawable bt_exit_background
 drawable bt_ok_button
 drawable bt_relatorio
 drawable bt_search_background
+drawable cio_card_io_logo
+drawable cio_ic_amex
+drawable cio_ic_discover
+drawable cio_ic_jcb
+drawable cio_ic_mastercard
+drawable cio_ic_paypal_monogram
+drawable cio_ic_visa
+drawable cio_paypal_logo
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1125,6 +1112,7 @@ id Ano
 id CTRL
 id CVV
 id FUNCTION
+id IDTransacao
 id META
 id Mes
 id NomeCartao
@@ -1183,8 +1171,6 @@ id bt_ok_relatorio
 id bt_relatorio
 id bt_remover
 id bt_vendas
-id btn_no
-id btn_yes
 id buttonAlterarSenha
 id buttonPanel
 id buttonTornarAdministrador
@@ -1255,7 +1241,6 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
-id iv_title
 id l_cvv
 id label_Quantidade
 id labeled
@@ -1271,8 +1256,6 @@ id listaItens
 id lista_compras
 id lista_vendas
 id ll_card_number
-id ll_container
-id ll_content
 id login_form
 id login_progress
 id masked
@@ -1322,8 +1305,6 @@ id rbPorUn
 id right
 id right_icon
 id right_side
-id rl_buttons
-id rl_title
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1365,6 +1346,7 @@ id standard
 id start
 id status_bar_latest_event_content
 id stretch
+id stt
 id submenuarrow
 id submit_area
 id tabMode
@@ -1397,6 +1379,7 @@ id textView2
 id textView20
 id textView21
 id textView22
+id textView23
 id textView24
 id textView26
 id textView3
@@ -1428,7 +1411,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id tv_preco_KG_UN
-id tv_title
 id txtBemVindo
 id txtLucro
 id txtQuantidadeComprada
@@ -1449,7 +1431,6 @@ id useLogo
 id view_offset_helper
 id visible
 id webView
-id web_view
 id wide
 id withText
 id wrap
@@ -1529,7 +1510,6 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
-layout layout_mddialog
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -2151,7 +2131,6 @@ style Widget_MaterialComponents_TextInputLayout_OutlinedBox
 style Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense
 style Widget_MaterialComponents_Toolbar
 style Widget_Support_CoordinatorLayout
-style dialog
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
